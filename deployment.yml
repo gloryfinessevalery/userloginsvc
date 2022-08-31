@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-login-svc
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: user-login-svc
+  template:
+    metadata:
+      labels:
+        app: user-login-svc 
+    spec:
+      containers:
+      - name: user-login-svc
+        image: gloryfinessevalery/user-login-svc:1.0.0 
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8080

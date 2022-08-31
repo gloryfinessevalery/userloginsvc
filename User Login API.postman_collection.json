@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "39fab885-7311-4a2b-a850-1d8d0c0078fa",
+		"name": "User Login API",
+		"description": "# Introduction\nAPI for Create, Retrieve, Update, Delete, and Login User.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4549880"
+	},
+	"item": [
+		{
+			"name": "{{host}}/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "User login"
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}?token={{token}}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}?token={{token}}",
+					"host": [
+						"{{host}}"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "Get list of all users"
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/show?userID={{userID}}&token={{token}}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/show?userID={{userID}}&token={{token}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"show"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "{{userID}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "Retrieve user detail"
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/create?token={{token}}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/create?token={{token}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"create"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "Create a new user"
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/update?userID={{userID}}&token={{token}}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/update?userID={{userID}}&token={{token}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"update"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "{{userID}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "Update user detail"
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}/delete?userID={{userID}}&token={{token}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/delete?userID={{userID}}&token={{token}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"delete"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "{{userID}}"
+						},
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
+				},
+				"description": "Delete a user"
+			},
+			"response": []
+		}
+	]
+}
